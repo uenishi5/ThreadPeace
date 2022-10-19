@@ -13,6 +13,8 @@ public class PostDetail {
     private String schedule;
     private String target;
     private String status;
+    private String postUserId;
+    private String joinUserId;
     private int age;
     private int recruitmentnumbers;
 }
