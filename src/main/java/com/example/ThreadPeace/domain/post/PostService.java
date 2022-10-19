@@ -4,14 +4,21 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-@AllArgsConstructor
 @Service
+@AllArgsConstructor
 public class PostService {
     private final PostRepository repository;
 
-//    public List<Post> getPostList(){
-//        return repository.getPostList();
-//    }
+    public List<Post> getPostList(){
+        return repository.getPostList();
+    }
+
+    public void post(String goal,String summary){
+        repository.post(goal,summary);
+    }
+
+    public void deletePost(String postId){
+        repository.deletePost(postId);
+    }
 
 }
