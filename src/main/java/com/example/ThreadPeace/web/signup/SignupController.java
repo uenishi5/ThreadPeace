@@ -28,7 +28,7 @@ public class SignupController {
         if(bindingResult.hasErrors()){
             return showSignupForm(form);
         }
-        service.createUser(form.getPw(),form.getName(),form.getAge());
+        service.createUser(form.getMx(),form.getPw(),form.getName(),form.getAge());
         return "login";
     }
 }

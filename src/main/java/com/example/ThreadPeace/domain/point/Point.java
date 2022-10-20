@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Point {
-    private int userId;
+    private String userId;
     private int rank;
     private int point;
 }

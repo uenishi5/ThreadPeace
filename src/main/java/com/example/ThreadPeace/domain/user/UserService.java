@@ -10,9 +10,9 @@ public class UserService {
     private final UserRepository repository;
     private final PasswordEncoder encoder;
 
-    public void createUser(String pw,String name,int age) {
+    public void createUser(String mx,String pw,String name,int age) {
         var encodPassword = encoder.encode(pw);
-        repository.createUser(pw,"user");
+        repository.createUser(mx,pw,"user");
         repository.createDetailUser(name,age,0);
     }
 
