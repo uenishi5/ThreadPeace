@@ -13,7 +13,7 @@ public class PostDetailService {
 
     private final PostRepository repository;
 
-    public PostDetail showPostDetail(String postId){
+    public PostDetail showPostDetail(int postId){
         return repository.getPostDetail(postId);
     }
 
