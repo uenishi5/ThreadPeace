@@ -11,11 +11,9 @@ import java.util.List;
 public class PointService {
     private final PointRepository repository;
 
-    public void addPoint(String userId){
-        repository.addPoint(userId);
+    public void pointOperation(String userId,int point){
+        repository.pointOperation(userId,point);
     }
 
-    public void usePoint(String userId){
-        repository.usePoint(userId);
-    }
+
 }

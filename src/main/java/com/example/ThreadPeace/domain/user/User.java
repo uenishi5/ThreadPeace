@@ -11,6 +11,6 @@ public class User {
     private Authority authority;
 
     public enum Authority {
-        ADMIN, USER,Recruiter
+        ADMIN, USER
     }
 }
