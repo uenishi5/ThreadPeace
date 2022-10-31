@@ -13,6 +13,6 @@ public class UserService {
     public void createUser(String id,String pw,String name,int age) {
         var encodPassword = encoder.encode(pw);
         repository.createUser(id,encodPassword,"user");
-        repository.createDetailUser(id,name,age,0);
+        repository.createDetailUser(id,name,0,age);
     }
 }

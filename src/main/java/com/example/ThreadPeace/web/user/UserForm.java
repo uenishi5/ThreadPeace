@@ -22,7 +22,7 @@ public class UserForm {
     @Size(min=10,max=128)
     private String pw;
 
-    @NotBlank
-    @Size(min=6,max=80)
-    private int age;
+//    @NotBlank
+//    @Size(min=6,max=80)
+//    private int age;
 }

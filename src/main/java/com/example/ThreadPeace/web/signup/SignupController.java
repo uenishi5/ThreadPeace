@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("signup")
+@RequestMapping("/signup")
 @RequiredArgsConstructor
 public class SignupController {
     private final UserService service;
 
     @GetMapping
     public String showSignupForm(@ModelAttribute UserForm userForm){
-        return "signup";
+        return "signup/signupform";
     }
 
     @PostMapping
@@ -28,7 +28,8 @@ public class SignupController {
         if(bindingResult.hasErrors()){
             return showSignupForm(form);
         }
-        service.createUser(form.getMx(),form.getPw(),form.getName(),form.getAge());
+        service.createUser(form.getMx(),form.getPw(),form.getName(),0);
         return "login";
     }
+
 }

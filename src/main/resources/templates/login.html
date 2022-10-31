@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>トップページ</title>
 </head>
 <body>
-
+<h1>うんこアプリ</h1>
+<div th:if="${param.error}">
+    <font color="red"><p>IDもしくはパスワードが違います</p></font>
+</div>
+<form action="#" th:action="@{/login}" method="post">
+    <div class="mt-3">
+        <label for="name" class="form-label">ID</label>
+        <input type="text" id="name" name="username" class="form-control">
+    </div>
+    <div class="mt-3">
+        <label for="pw" class="form-label">パスワード</label>
+        <input type="password" id="pw" name="password" class="form-control">
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-outline-primary">ログイン</button>
+        <a href="signup/signupform.html" th:href="@{/signup}"  class="btn btn-outline-success">新規作成</a>
+    </div>
+</form>
 </body>
 </html>
