@@ -1,4 +1,4 @@
-package com.example.ThreadPeace.domain.postDetail;
+package com.example.ThreadPeace.domain.recruitmentDetail;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Data
 @AllArgsConstructor
-public class PostDetail {
+public class RecruitmentDetail {
     private int id;
     private int postid;
     private String activitytheme;

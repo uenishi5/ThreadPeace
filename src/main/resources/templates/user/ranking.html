@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
+<head>
+    <title>ランキング</title>
+</head>
+<body>
+<h4>アイコン</h4>
+<h4>名前</h4>
+<h2 th:text="${user.name}"></h2>
+<h4>ポイント</h4>
+<h2 th:text="${user.point}"></h2>
+<table>
+    <tr>
+        <th>順位</th>
+        <th>ユーザー名</th>
+        <th>ポイント</th>
+    </tr>
+    <tr th:each="ranking : ${rankingList}">
+        <td th:text="${rankingStat.count}"></td>
+        <td th:text="${ranking.name}"></td>
+        <td th:text="${ranking.point}"></td>
+    </tr>
+</table>
+</body>
+</html>
+
+<!--<tr th:each="user : ${userList}">
+        <td th:text="${user.name}"></td>
+
+        <td th:text="${user.registratio_time}"></td>
+    </tr>-->

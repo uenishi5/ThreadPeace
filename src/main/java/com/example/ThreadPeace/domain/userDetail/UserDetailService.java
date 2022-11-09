@@ -11,4 +11,8 @@ public class UserDetailService {
     public UserDetail getUser(String id) {
         return repository.getUser(id);
     }
+
+    public UserDetail selectUser(String userId) {
+        return repository.getUser(userId);
+    }
 }

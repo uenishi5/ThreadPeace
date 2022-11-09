@@ -19,7 +19,7 @@ public class LoginController {
         if(isAdmin){
             return "/admin/top";
         }
-        return "top";
+        return "/recruitment/recruitment";
     }
 
     @GetMapping("login")
