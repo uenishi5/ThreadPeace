@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <title>プロフィール</title>
+</head>
+<body>
+<h1>プロフィール</h1>
+<h4>アイコン</h4>
+<h5 th:text="${user.name}"></h5>
+<br><br>
+<h4>名前</h4>
+<h2 th:text="${user.name}"></h2>
+<br>
+<h4>年齢</h4>
+<h2 th:text="${user.age}"></h2>
+<br>
+<h4>ポイント</h4>
+<h2 th:text="${user.point}"></h2>
+</body>
+</html>

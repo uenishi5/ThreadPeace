@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー一覧</title>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body>
+<div>
+    <table>
+        <tr th:each="recruitment: ${recruitmentList}">
+            <td th:text="recruitment.goal">(goal)</td>
+            <td th:text="recruitment.summary">(summary)</td>
+        </tr>
+    </table>
+</div>
+<a th:href="@{/user/profile}">プロフィールへ</a>
+<br>
+<a th:href="@{/user/ranking}">ランキングへ</a>
+</body>
+</html>
