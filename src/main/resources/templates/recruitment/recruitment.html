@@ -10,7 +10,9 @@
 <div>
     <table>
         <tr th:each="recruitment: ${recruitmentList}">
-            <td th:text="recruitment.goal">(goal)</td>
+            <td class="hr3"><a th:text="recruitment.goal" th:href="@{/recruitment/showDetail/{recruitmentId}(recruitmentId=${recruitment.id})}">(goal)</a></td>
+            <td th:text="recruitment.area">(area)</td>
+            <td th:text="recruitment.number">(number)</td>
             <td th:text="recruitment.summary">(summary)</td>
         </tr>
     </table>

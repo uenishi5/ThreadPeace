@@ -22,7 +22,7 @@ import java.util.List;
 public class UserController {
     private final UserDetailService detailService;
     public final PointService pointService;
-    private final UserService userService;
+
     @GetMapping
     public String ShowMyPage(@AuthenticationPrincipal User user, Model model){
         UserDetail userDetail = detailService.getUser(user.getId());
