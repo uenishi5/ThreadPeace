@@ -9,8 +9,6 @@ public class Recruitment {
     private int id;
     private String goal;
     private String summary;
-
     private String area;
-
-    private int recruitmentNumbers;
+    private int number;
 }

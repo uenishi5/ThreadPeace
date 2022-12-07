@@ -5,6 +5,22 @@
     <title>ボランティア募集詳細</title>
 </head>
 <body>
+<form>
+    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+    <input type="submit" value="SUBMIT"/>
+</form>
 
+<footer class="footer">
+    <nav class="global-nav">
+        <ul class="bottom-menu">
+            <li class=”nav-item”><a th:href="@{/}"><i class="fa-solid fa-magnifying-glass" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/post}"><i class="fa-regular fa-pen-to-square" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/ranking}"><i class="fa-solid fa-ranking-star" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/profile}"><i class="fa-solid fa-user" style="color:black;"></i></a></li>
+        </ul>
+    </nav>
+</footer>
 </body>
 </html>

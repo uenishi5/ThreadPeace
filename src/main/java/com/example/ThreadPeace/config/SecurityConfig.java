@@ -21,7 +21,7 @@ public class SecurityConfig  {
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .mvcMatchers("/login/**","/signup/**","/css/**", "/image/**", "/js/**").permitAll()
+                .mvcMatchers("/login/**","/signup/**","/css/**", "/images/**", "/js/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

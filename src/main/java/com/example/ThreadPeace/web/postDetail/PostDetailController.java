@@ -16,6 +16,7 @@ public class PostDetailController {
     @GetMapping
     public String showPostList(Model model){
         model.addAttribute("postList",service.getPostList());
+
         return "/post/postList";
     }
 }

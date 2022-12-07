@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper
 public interface PostRepository {
 
-    @Select("select * from post order by date desc")
+    @Select("select * from postDetail")
     List<Post> getPostList();
 }

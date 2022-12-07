@@ -4,19 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>ユーザー一覧</title>
-    <link rel="stylesheet" href="button.css">
 </head>
 <body>
-<div>
-    <table>
-        <tr th:each="recruitment: ${recruitmentList}">
-            <td th:text="recruitment.goal">(goal)</td>
-            <td th:text="recruitment.summary">(summary)</td>
+<div class="center">
+    <br><br>
+    <h1><span>ボランティア募集</span></h1>
+    <button type="button" class="btn btn-dark">募集する</button>
+    <table th:each="recruitment: ${recruitmentList}" class="table" align="center">
+        <tr>
+            <th th:text="${recruitment.goal}"></th>
         </tr>
+        <tr class="left">
+            <td>地域：<h7 th:text="${recruitment.area}"></h7></td>
+        </tr>
+        <tr class="left">
+            <td>募集人数：<h7 th:text="${recruitment.number}"></h7>人</td>
+        </tr>
+        <tr class="left">
+            <td th:text="${recruitment.summary}">(summary)</td>
+        </tr>
+<br><br>
     </table>
 </div>
-<a th:href="@{/user/profile}">プロフィールへ</a>
-<br>
-<a th:href="@{/user/ranking}">ランキングへ</a>
+<footer class="footer">
+    <nav class="global-nav">
+        <ul class="bottom-menu">
+            <li class=”nav-item”><a th:href="@{/}"><i class="fa-solid fa-magnifying-glass" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/post}"><i class="fa-regular fa-pen-to-square" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/ranking}"><i class="fa-solid fa-ranking-star" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/profile}"><i class="fa-solid fa-user" style="color:black;"></i></a></li>
+        </ul>
+</nav>
+</footer>
+
 </body>
 </html>

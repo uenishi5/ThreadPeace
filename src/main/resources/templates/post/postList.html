@@ -6,12 +6,36 @@
     <title>投稿</title>
 </head>
 <body>
-<table>
-    <tr th:each="postList : ${postList}">
-        <td th:text="${postList.detail}"></td>
-        <td th:text="${postList.likeCount}"></td>
-        <td th:text="${postList.userName}"></td>
+<br><br>
+<h1><span>投稿</span></h1>
+<div class="center">
+<button type="button" class="btn btn-dark">投稿する</button>
+</div>
+<table th:each="postList: ${postList}" class="table" align="center">
+    <tr>
+        <th><img class="postimg" th:src="@{/images/{img}.png(img=${postList.image})}"> </th>
     </tr>
+    <tr class="left">
+        <td><h7>♡</h7><h7 th:text="${postList.likeCount}"></h7><h7>likes</h7></td>
+    </tr>
+    <tr class="left">
+        <td><h7 th:text="${postList.detail}"></h7></td>
+    </tr>
+    <tr class="right">
+        <td class="wrap"><h5 class="haba" th:text="${postList.userName}"></h5><p class="prf_icon"><img th:src="@{/images/{img}.png(img=${postList.icon})}"></p></td>
+    </tr>
+    <br><br>
 </table>
+
+<footer class="footer">
+    <nav class="global-nav">
+        <ul class="bottom-menu">
+            <li class=”nav-item”><a th:href="@{/}"><i class="fa-solid fa-magnifying-glass" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/post}"><i class="fa-regular fa-pen-to-square" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/ranking}"><i class="fa-solid fa-ranking-star" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/profile}"><i class="fa-solid fa-user" style="color:black;"></i></a></li>
+        </ul>
+    </nav>
+</footer>
 </body>
 </html>

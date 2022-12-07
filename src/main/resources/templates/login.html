@@ -5,10 +5,14 @@
     <title>トップページ</title>
 </head>
 <body>
-<h1>うんこアプリ</h1>
+<br><br>
+<h1><span>ThreadPeace</span></h1>
 <div th:if="${param.error}">
-    <font color="red"><p>IDもしくはパスワードが違います</p></font>
-</div>
+    <span style="color: red; "><p>IDもしくはパスワードが違います</p></span>
+</div><br><br>
+<p class="ui-icon-image">
+    <img th:src="@{images/icon.jpg}" alt="アイコン" src="../static/images/icon.jpg" />
+</p>
 <form action="#" th:action="@{/login}" method="post">
     <div class="mt-3">
         <label for="name" class="form-label">ID</label>
@@ -18,8 +22,8 @@
         <label for="pw" class="form-label">パスワード</label>
         <input type="password" id="pw" name="password" class="form-control">
     </div>
-    <div class="mt-3">
-        <button type="submit" class="btn btn-outline-primary">ログイン</button>
+    <div class="mt-3 center">
+        <button type="submit" class="btn btn-outline-primary">ログイン</button><br><br>
         <a href="signup/signupform.html" th:href="@{/signup}"  class="btn btn-outline-success">新規作成</a>
     </div>
 </form>

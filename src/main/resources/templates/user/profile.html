@@ -6,8 +6,12 @@
     <title>プロフィール</title>
 </head>
 <body>
-<h1>プロフィール</h1>
-<h4>アイコン</h4>
+<br><br>
+<div class="center">
+<h1><span>プロフィール</span></h1>
+<p class="prf_icon_prf">
+    <img th:src="@{/images/img.png}" alt="アイコン" src="../../static/images/img.png" />
+</p>
 <h5 th:text="${user.name}"></h5>
 <br><br>
 <h4>名前</h4>
@@ -17,6 +21,20 @@
 <h2 th:text="${user.age}"></h2>
 <br>
 <h4>ポイント</h4>
-<h2 th:text="${user.point}"></h2>
+<h2 th:text="${user.point}"></h2><br>
+    <section>
+        <a href="#" class="btn_10"><span>プロフィールの変更</span></a>
+    </section>
+</div>
+<footer class="footer">
+    <nav class="global-nav">
+        <ul class="bottom-menu">
+            <li class=”nav-item”><a th:href="@{/}"><i class="fa-solid fa-magnifying-glass" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/post}"><i class="fa-regular fa-pen-to-square" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/ranking}"><i class="fa-solid fa-ranking-star" style="color:black;"></i></a></li>
+            <li class="nav-item"><a th:href="@{/user/profile}"><i class="fa-solid fa-user" style="color:black;"></i></a></li>
+        </ul>
+    </nav>
+</footer>
 </body>
 </html>

@@ -6,7 +6,10 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Post {
-    private String userName;
-    private String detail;
+    private int postId;
+    private String image;
     private int likeCount;
+    private String detail;
+    private String userName;
+    private String icon;
 }
